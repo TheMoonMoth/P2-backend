@@ -1,0 +1,30 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "This repo contains the backend code",
+  "main": "app.js",
+  "scripts": {
+    "test": "node test/test.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheMoonMoth/P2-backend.git"
+  },
+  "author": "Kyle Weintraub",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheMoonMoth/P2-backend/issues"
+  },
+  "homepage": "https://github.com/TheMoonMoth/P2-backend#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mocha": "^4.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.5"
+  }
+}
