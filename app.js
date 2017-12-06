@@ -4,12 +4,12 @@ const bodyParser = require('body-parser')
 
 //FILES
 const students = require('./data/students.js').students
+const teachers = require('./data/teachers.js').teachers
 
-const testing = [{
-  testing: "one",
-  one: "two one two"
-}]
+//FUNCTIONS
 
+
+//SERVER CODE
 const app = express()
 app.use(cors())
 
@@ -30,3 +30,10 @@ app.get('/b', function(req, resp){
 
 
 app.listen(3000)
+
+
+
+//EXPORTS
+module.exports = {
+
+}
