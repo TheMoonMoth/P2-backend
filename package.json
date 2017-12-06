@@ -26,5 +26,8 @@
   },
   "devDependencies": {
     "nodemon": "^1.12.5"
+  },
+  "directories": {
+    "test": "test"
   }
 }

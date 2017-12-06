@@ -7,7 +7,9 @@ const students = require('./data/students.js').students
 const teachers = require('./data/teachers.js').teachers
 
 //FUNCTIONS
-
+function test(){
+  return "test"
+}
 
 //SERVER CODE
 const app = express()
@@ -35,5 +37,5 @@ app.listen(3000)
 
 //EXPORTS
 module.exports = {
-
+  test
 }
