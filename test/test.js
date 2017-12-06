@@ -18,12 +18,14 @@ describe('#findTeacher', function(){
 
 describe("#findStudentsFromGrade", function(){
   it("takes a grade level and returns all students in that grade", function(){
-    assert.deepEqual(funk.findStudentsFromGrade(8), ([{
-                          name: "Damn Daniel"
-                        },{
-                          name: "Edger Ebert"
-                        },{
-                          name: "Frank Froink"
-                        }]))
+    assert.deepEqual(funk.findStudentsFromGrade(8),
+      [{
+        name: "Damn Daniel"
+      },{
+        name: "Edger Ebert"
+      },{
+        name: "Frank Froink"
+      }]
+    )
   })
 })
