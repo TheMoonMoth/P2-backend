@@ -1,22 +1,29 @@
-// const mocha = require('mocha')
-// const expect = require('chai').expect
-// const funk = require('../app.js')
-//
-// const students = require('../data/students.js')
-// const teachers = require('../data/teachers.js')
-//
-// describe("#mashPeople", function(){
-//   it('takes a teacher and a student and returns a new object with both', function(){
-//     expect(funk.mashPeople(students[3][0], teachers[2]).to.deep.equal({student: "Mac Nally", teacher: "Billy Burch"}))
-//   })
-// })
-
-
 const assert = require('assert')
 const funk = require('../app.js')
 
-describe("#test", function(){
-  it("asdf", function(){
-    assert.equal(funk.test(), "test")
+const students = require('../data/students.js')
+const teachers = require('../data/teachers.js')
+
+describe("#findGrade", function(){
+  it('takes a teacher name and prints array of their grade levels', function(){
+    assert.deepEqual(funk.findGrade("Billy Burch"), (["2", "3"]))
+  })
+})
+
+describe('#findTeacher', function(){
+  it("takes a grade level and prints that grade's teacher", function(){
+    assert.equal(funk.findTeacher(6), ("Roxanne"))
+  })
+})
+
+describe("#findStudentsFromGrade", function(){
+  it("takes a grade level and returns all students in that grade", function(){
+    assert.deepEqual(funk.findStudentsFromGrade(8), ([{
+                          name: "Damn Daniel"
+                        },{
+                          name: "Edger Ebert"
+                        },{
+                          name: "Frank Froink"
+                        }]))
   })
 })
