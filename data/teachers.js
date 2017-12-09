@@ -1,18 +1,18 @@
 const teachers = [{
   name: "Willa Bograd",
-  grades: ["k", "1"]
+  grades: ["kindergarten", "first"]
 },{
   name: "Billy Burch",
-  grades: ["2", "3"]
+  grades: ["second", "third"]
 },{
   name: "Allie Morgan",
-  grades: ["4", "5"]
+  grades: ["fourth", "fifth"]
 },{
-  name: "Roxanne",
-  grades: ["6", "7"]
+  name: "Roxanne Celeste",
+  grades: ["sixth", "seventh"]
 },{
-  name: "Omar",
-  grades: ["8"]
+  name: "Maggie Kaine",
+  grades: ["eighth"]
 }]
 
 module.exports = {

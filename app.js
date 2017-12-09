@@ -6,6 +6,9 @@ const bodyParser = require('body-parser')
 const studentsList = require('./data/students.js')
 const teachers = require('./data/teachers.js').teachers
 
+const logger = []
+
+
 //FUNCTIONS
 function findGrade(teacherName){
   for (var i = 0; i < teachers.length; i++){
@@ -27,55 +30,74 @@ function findTeacher(gradeLevel){
 
 function findStudentsFromGrade(grade){
   switch(grade.toString()){
-    case "K":
+    case "kindergarten":
       return studentsList.kinders
       break
-    case "1":
+    case "first":
       console.log("1");
       return studentsList.firsters
       break
-    case "2":
+    case "second":
       return studentsList.seconders
       break
-    case "3":
+    case "third":
       return studentsList.thirders
       break
-    case "4":
+    case "fourth":
       return studentsList.fourthers
       break
-    case "5":
+    case "fifth":
       return studentsList.fifthers
       break
-    case "6":
+    case "sixth":
       return studentsList.sixers
       break
-    case "7":
+    case "seventh":
       return studentsList.seveners
       break
-    case "8":
+    case "eighth":
       return studentsList.eighters
+      break
     default:
-      console.log("switch is working")
+      return "Not within scope"
+      break
   }
 }
+
+function dataMash(teachers, students){
+  let fullDataSet = []
+  for (var i = 0; i < teachers.length; i++){
+    fullDataSet.push(teachers[i])
+    findGrade(teachers[i])
+  }
+}
+
 
 //SERVER CODE
 const app = express()
 app.use(cors())
+app.use(bodyParser.urlencoded({
+    extended: true
+}))
+app.use(bodyParser.json())
 
-app.get('/', function(req, res){
-  console.log("response is working")
-  res.json(students)
+app.get('/students', function(request, response){
+  response.json(studentsList)
 })
 
-app.get('/a', function(request, response){
-  console.log("this route works too")
-  response.json(testing)
+app.get('/teachers', function(request, response){
+  response.json(teachers)
 })
 
-app.get('/b', function(req, resp){
-  console.log('require file route connected')
-  resp.json()
+app.post('/teacherboard', function(request, response){
+  let newDate = new Date()
+  request.body.date = newDate
+  logger.push(request.body)
+  response.json({message: "Your report has been submitted"})
+})
+
+app.get('/teacherboard', function(request, response){
+  response.json(logger)
 })
 
 

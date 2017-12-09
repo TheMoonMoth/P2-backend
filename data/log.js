@@ -5,3 +5,7 @@ const data = require('')
 const log = {
   allReports: []
 }
+
+module.exports = {
+  log
+}

@@ -1,4 +1,4 @@
-const kinders = [{
+const kindergarten = [{
                       name: "Alan Zorbo"
                     },{
                       name: "Brian Yost"
@@ -8,7 +8,7 @@ const kinders = [{
                       name: "David Walsh"
                     }]
 
-const firsters = [{
+const first = [{
                       name: "Ethan Valla"
                     },{
                       name: "Francis Underwood"
@@ -18,7 +18,7 @@ const firsters = [{
                       name: "Heidi Shallow"
                     }]
 
-const seconders = [{
+const second = [{
                       name: "Irene Rockwell"
                     },{
                       name: "Jaquelline Quail"
@@ -28,7 +28,7 @@ const seconders = [{
                       name: "LaRue Onderson"
                     }]
 
-const thirders = [{
+const third = [{
                       name: "Mac Nally"
                     },{
                       name: "Nathan Mathan"
@@ -36,7 +36,7 @@ const thirders = [{
                       name: "Oren LaBell"
                     }]
 
-const fourthers = [{
+const fourth = [{
                       name: "PK Fire"
                     },{
                       name: "Queen Jackson"
@@ -46,7 +46,7 @@ const fourthers = [{
                       name: "Sandy Handy"
                     }]
 
-const fifthers = [{
+const fifth = [{
                       name: "Tommy Garrisin"
                     },{
                       name: "Uta Fagan"
@@ -56,7 +56,7 @@ const fifthers = [{
                       name: "Walter Dandy"
                     }]
 
-const sixers = [{
+const sixth = [{
                       name: "Xander Corrigan"
                     },{
                       name: "Yara Brayjoy"
@@ -64,7 +64,7 @@ const sixers = [{
                       name: "Zachary Alton"
                     }]
 
-const seveners = [{
+const seventh = [{
                       name: "Andrew Angler"
                     },{
                       name: "Brianna Banana"
@@ -72,7 +72,7 @@ const seveners = [{
                       name: "Carl Carlsberg"
                     }]
 
-const eighters = [{
+const eighth = [{
                       name: "Damn Daniel"
                     },{
                       name: "Edger Ebert"
@@ -80,16 +80,14 @@ const eighters = [{
                       name: "Frank Froink"
                     }]
 
-const students = [kinders, firsters, seconders, thirders, fourthers, fifthers, sixers, seveners, eighters]
 module.exports = {
-  students,
-  kinders,
-  firsters,
-  seconders,
-  thirders,
-  fourthers,
-  fifthers,
-  sixers,
-  seveners,
-  eighters
+  kindergarten,
+  first,
+  second,
+  third,
+  fourth,
+  fifth,
+  sixth,
+  seventh,
+  eighth
 }
