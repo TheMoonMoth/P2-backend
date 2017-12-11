@@ -90,8 +90,19 @@ app.get('/teachers', function(request, response){
 })
 
 app.post('/teacherboard', function(request, response){
-  let newDate = new Date()
-  request.body.date = newDate
+  let date = new Date()
+  let year = date.getFullYear()
+  let month = date.getMonth()
+  let day = 0
+  if (date.getDate() < 10){
+    day = day + date.getDate()
+  } else {
+    day = date.getDate()
+  }
+  let hour = date.getHours()
+  let minute = date.getMinutes()
+
+  request.body.date = `${month + 1} ${day}, ${year} at ${hour}:${minute}`
   logger.push(request.body)
   response.json({message: "Your report has been submitted"})
 })
